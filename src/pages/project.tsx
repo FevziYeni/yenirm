@@ -34,27 +34,23 @@ import hamidiye from "../assets/projects/hamidiye.jpg";
 import hamidiye1 from "../assets/projects/hamidiye1.jpg";
 import hamidiye2 from "../assets/projects/hamidiye2.jpg";
 import hamidiye3 from "../assets/projects/hamidiye3.jpg";
+import ürgüplü from "../assets/projects/ürgüplü.jpg";
+import yeni from "../assets/projects/68.jpg";
 
 const ourProjects = [
   {
     id: 1,
-    title: "YENİKÖY KONUT PROJESİ",
-    description: "Modern yaşam alanlarıyla yeni bir başlangıç.",
+    title: "Ürgüplü Projesi",
+    description: "Toplumsal Proje",
     date: "2024-06-15",
-    images: [
-      "https://picsum.photos/id/1011/600/300",
-      "https://picsum.photos/id/1012/600/300",
-    ],
+    images: [ürgüplü],
   },
   {
     id: 2,
-    title: "MARMARA EVLERİ",
-    description: "Deniz manzaralı, çevreci konutlar.",
+    title: "İstanbul/Bayrampaşa",
+    description: "Toplumsal Konut",
     date: "2023-11-02",
-    images: [
-      "https://picsum.photos/id/1015/600/300",
-      "https://picsum.photos/id/1016/600/300",
-    ],
+    images: [yeni],
   },
 ];
 
@@ -118,7 +114,7 @@ const ImageModal: React.FC<{
         src={src}
         alt={alt}
         className="max-w-4xl max-h-[90vh] rounded-lg shadow-lg cursor-auto"
-        onClick={(e) => e.stopPropagation()} // modal içindeki görsele tıklayınca kapanmasın
+        onClick={(e) => e.stopPropagation()}
       />
       <button
         onClick={onClose}
@@ -147,8 +143,10 @@ const ProjectsPage: React.FC = () => {
 
   return (
     <AnimatedSection className="py-20 px-6 text-white">
-      <h2 className="text-3xl font-bold text-center mb-12">Projeler</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <h2 className="text-6xl font-bold  bg-gradient-to-r from-white via-gold to-white  bg-clip-text  text-transparent text-center ">
+        Projeler
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 pt-10">
         {/* Kendi Projelerimiz */}
         <div>
           <h3 className="text-xl font-semibold mb-4">Projelerimiz</h3>

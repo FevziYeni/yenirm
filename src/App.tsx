@@ -9,16 +9,16 @@ import Navbar from "./components/Navbar";
 // Arka plan görselini import et
 import bgImage from "./assets/bgimage.jpg";
 
+import { HelmetProvider } from "react-helmet-async";
+
+// ...
 const App: React.FC = () => {
   return (
-    <div
-      className="relative min-h-screen w-full overflow-hidden bg-cover bg-center bg-fixed"
-      style={{
-        backgroundImage: `url(${bgImage})`,
-      }}
-    >
-      {/* Sayfa İçeriği */}
-      <div className="relative z-10 min-h-screen flex flex-col justify-between">
+    <HelmetProvider>
+      <div
+        className="relative min-h-screen w-full overflow-hidden bg-cover bg-center bg-fixed"
+        style={{ backgroundImage: `url(${bgImage})` }}
+      >
         <Router>
           <Navbar />
           <Routes>
@@ -27,10 +27,10 @@ const App: React.FC = () => {
             <Route path="/contact" element={<Contact />} />
             <Route path="/projects" element={<Project />} />
           </Routes>
-          {/* <Footer /> */}
+          {/* Footer burada olabilir */}
         </Router>
       </div>
-    </div>
+    </HelmetProvider>
   );
 };
 
