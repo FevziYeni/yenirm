@@ -10,6 +10,7 @@ import Navbar from "./components/Navbar";
 import bgImage from "./assets/bgimage.jpg";
 
 import { HelmetProvider } from "react-helmet-async";
+import Footer from "./components/footer";
 
 // ...
 const App: React.FC = () => {
@@ -27,7 +28,7 @@ const App: React.FC = () => {
             <Route path="/contact" element={<Contact />} />
             <Route path="/projects" element={<Project />} />
           </Routes>
-          {/* Footer burada olabilir */}
+          <Footer />
         </Router>
       </div>
     </HelmetProvider>
