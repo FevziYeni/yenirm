@@ -9,7 +9,7 @@ const HeroSection = () => {
     "https://wa.me/905323322960?text=Merhaba%2C%20Yeni%20RM%20%C4%B0n%C5%9Faat%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.";
 
   return (
-    <section className="relative min-h-[680px] w-full overflow-hidden md:min-h-[760px]">
+    <section className="relative min-h-[720px] w-full overflow-hidden md:min-h-[760px]">
       <div className="absolute inset-0">
         <img
           src={bgImage}
@@ -21,16 +21,16 @@ const HeroSection = () => {
       </div>
 
       <div className="absolute inset-0 z-20 flex items-center">
-        <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-10 px-6 pt-16 text-white lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
-          <div className="max-w-3xl">
+        <div className="mx-auto grid w-full max-w-7xl min-w-0 grid-cols-1 gap-8 px-4 pt-20 text-white sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
+          <div className="min-w-0 max-w-3xl">
             <AnimatedSection>
-              <span className="mb-5 inline-flex rounded-full border border-gold/40 bg-black/35 px-4 py-2 text-sm font-semibold text-gold backdrop-blur">
+              <span className="mb-5 inline-flex max-w-full flex-wrap rounded-full border border-gold/40 bg-black/35 px-3 py-2 text-center text-xs font-semibold leading-5 text-gold backdrop-blur sm:px-4 sm:text-sm">
                 Bayrampaşa ve İstanbul’da güvenilir dönüşüm ortağı
               </span>
             </AnimatedSection>
 
             <AnimatedSection>
-              <h1 className="text-4xl font-extrabold leading-tight sm:text-5xl lg:text-7xl">
+              <h1 className="max-w-full text-3xl font-extrabold leading-tight sm:text-5xl lg:text-7xl">
                 Güvenli, modern ve değer kazandıran yaşam alanları.
               </h1>
             </AnimatedSection>
@@ -48,7 +48,7 @@ const HeroSection = () => {
                 <button
                   onClick={() => navigate("/projects")}
                   aria-label="Yeni RM İnşaat projelerini görüntüle"
-                  className="rounded-md bg-gold px-7 py-3 text-sm font-bold uppercase tracking-wide text-black shadow-lg transition hover:bg-white"
+                  className="w-full rounded-md bg-gold px-5 py-3 text-sm font-bold uppercase tracking-wide text-black shadow-lg transition hover:bg-white sm:w-auto sm:px-7"
                 >
                   Projeleri İncele
                 </button>
@@ -57,7 +57,7 @@ const HeroSection = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Yeni RM İnşaat WhatsApp hattına yaz"
-                  className="rounded-md border border-white/40 bg-white/10 px-7 py-3 text-center text-sm font-bold uppercase tracking-wide text-white backdrop-blur transition hover:border-gold hover:bg-gold hover:text-black"
+                  className="w-full rounded-md border border-white/40 bg-white/10 px-5 py-3 text-center text-sm font-bold uppercase tracking-wide text-white backdrop-blur transition hover:border-gold hover:bg-gold hover:text-black sm:w-auto sm:px-7"
                 >
                   WhatsApp ile Ulaş
                 </a>
@@ -66,7 +66,7 @@ const HeroSection = () => {
           </div>
 
           <AnimatedSection>
-            <div className="grid gap-4 rounded-lg border border-white/15 bg-black/35 p-5 shadow-2xl backdrop-blur-md sm:grid-cols-3 lg:mt-24 lg:grid-cols-1">
+            <div className="grid min-w-0 gap-4 rounded-lg border border-white/15 bg-black/35 p-4 shadow-2xl backdrop-blur-md sm:grid-cols-3 sm:p-5 lg:mt-24 lg:grid-cols-1">
               <div>
                 <p className="text-3xl font-extrabold text-gold">17+</p>
                 <p className="mt-1 text-sm text-white/75">Yıl sektör deneyimi</p>
