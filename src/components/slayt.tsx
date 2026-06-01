@@ -9,7 +9,7 @@ const HeroSection = () => {
     "https://wa.me/905323322960?text=Merhaba%2C%20Yeni%20RM%20%C4%B0n%C5%9Faat%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.";
 
   return (
-    <section className="relative min-h-[720px] w-full overflow-hidden md:min-h-[760px]">
+    <section className="relative flex min-h-[100svh] w-full items-center overflow-hidden pt-28 pb-12 md:min-h-[760px] md:pt-24">
       <div className="absolute inset-0">
         <img
           src={bgImage}
@@ -20,8 +20,8 @@ const HeroSection = () => {
         <div className="absolute bottom-0 left-0 h-40 w-full bg-gradient-to-t from-zinc-950/80 to-transparent" />
       </div>
 
-      <div className="absolute inset-0 z-20 flex items-center">
-        <div className="mx-auto grid w-full max-w-7xl min-w-0 grid-cols-1 gap-8 px-4 pt-20 text-white sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
+      <div className="relative z-20 w-full">
+        <div className="mx-auto grid w-full max-w-7xl min-w-0 grid-cols-1 gap-8 px-4 text-white sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
           <div className="min-w-0 max-w-3xl">
             <AnimatedSection>
               <span className="mb-5 inline-flex max-w-full flex-wrap rounded-full border border-gold/40 bg-black/35 px-3 py-2 text-center text-xs font-semibold leading-5 text-gold backdrop-blur sm:px-4 sm:text-sm">
@@ -66,7 +66,7 @@ const HeroSection = () => {
           </div>
 
           <AnimatedSection>
-            <div className="grid min-w-0 gap-4 rounded-lg border border-white/15 bg-black/35 p-4 shadow-2xl backdrop-blur-md sm:grid-cols-3 sm:p-5 lg:mt-24 lg:grid-cols-1">
+            <div className="hidden min-w-0 gap-4 rounded-lg border border-white/15 bg-black/35 p-5 shadow-2xl backdrop-blur-md md:grid md:grid-cols-3 lg:mt-24 lg:grid-cols-1">
               <div>
                 <p className="text-3xl font-extrabold text-gold">17+</p>
                 <p className="mt-1 text-sm text-white/75">Yıl sektör deneyimi</p>
