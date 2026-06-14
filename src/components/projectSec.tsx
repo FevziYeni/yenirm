@@ -24,6 +24,8 @@ const projects = [
   {
     title: "Ürgüplü Projesi",
     description: "Bayrampaşa’da kat karşılığı toplumsal konut projesi.",
+    location: "Bayrampaşa",
+    service: "kat karşılığı inşaat ve kentsel dönüşüm",
     images: [ürgüplü],
   },
   {
@@ -31,6 +33,8 @@ const projects = [
     title: "Kağıthane Yaşam Evleri",
     description:
       "İstanbul Kağıthane’de güvenli ve modern kentsel dönüşüm projeleri.",
+    location: "Kağıthane, İstanbul",
+    service: "modern konut ve kentsel dönüşüm",
     date: "2019-01-01",
     images: [kagıthane, kagıthane1, kagıthane2],
   },
@@ -39,6 +43,8 @@ const projects = [
     title: "İSKOM – İstanbul Su Kontrol ve Otomasyon Merkezi (Ortak Projeler)",
     description:
       "Büyük ölçekli su kontrol ve otomasyon tesisi projeleri. Kat karşılığı ve kentsel dönüşüm alanında referanslarımızdandır.",
+    location: "İstanbul",
+    service: "ortak proje ve altyapı referansı",
     date: "2019-01-01",
     images: [image1, image2, image3, image4, image5],
   },
@@ -82,16 +88,16 @@ const ProjectCardsSection = () => {
                   <CarouselItem key={idx}>
                     <img
                       src={img}
-                      alt={`${project.title} Görsel ${
+                      alt={`${project.location} ${project.title} ${
                         idx + 1
-                      } - Bayrampaşa ve İstanbul Kentsel Dönüşüm`}
+                      } - Yeni RM İnşaat ${project.service} referansı`}
                       className="h-[300px] w-full cursor-pointer rounded-md object-cover"
                       onClick={() =>
                         openModal(
                           img,
-                          `${project.title} Görsel ${
+                          `${project.location} ${project.title} ${
                             idx + 1
-                          } - Bayrampaşa ve İstanbul Kentsel Dönüşüm`
+                          } - Yeni RM İnşaat ${project.service} referansı`
                         )
                       }
                     />

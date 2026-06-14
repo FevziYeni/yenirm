@@ -39,14 +39,18 @@ const ourProjects = [
   {
     id: 1,
     title: "Ürgüplü Projesi",
-    description: "Toplumsal Proje",
+    description: "Bayrampaşa’da kat karşılığı inşaat ve konut projesi.",
+    location: "Bayrampaşa",
+    service: "kat karşılığı inşaat",
     date: "2024-06-15",
     images: [ürgüplü],
   },
   {
     id: 2,
     title: "İstanbul/Bayrampaşa",
-    description: "Toplumsal Konut",
+    description: "Bayrampaşa’da modern konut ve kentsel dönüşüm referansı.",
+    location: "Bayrampaşa",
+    service: "modern konut projesi",
     date: "2023-11-02",
     images: [yeni],
   },
@@ -57,6 +61,8 @@ const partnerProjects = [
     id: 1,
     title: "İSKOM – İstanbul Su Kontrol ve Otomasyon Merkezi",
     description: "Büyük ölçekli su kontrol ve otomasyon tesisi.",
+    location: "İstanbul",
+    service: "ortak altyapı projesi",
 
     images: [image1, image2, image3, image4, image5],
   },
@@ -64,6 +70,8 @@ const partnerProjects = [
     id: 2,
     title: "Darphane Genel Müdürlük Yangın Söndürme Sistemi",
     description: "Bina genelinde yangın güvenliği sistemi kurulumu.",
+    location: "İstanbul",
+    service: "yangın güvenliği sistemi",
     date: "2022-01-01",
     images: [darphane, darphane1],
   },
@@ -71,6 +79,8 @@ const partnerProjects = [
     id: 3,
     title: "Kağıthane Yaşam Evleri",
     description: "Toplumsal konut projesi.",
+    location: "Kağıthane",
+    service: "konut projesi",
 
     images: [kagıthane, kagıthane1, kagıthane2],
   },
@@ -78,6 +88,8 @@ const partnerProjects = [
     id: 4,
     title: "İSTAÇ Tıbbi Atık Sterilizasyon Tesisi",
     description: "Sterilizasyon tesisi altyapısı.",
+    location: "İstanbul",
+    service: "tesis altyapısı",
 
     images: [istac, istac1, istac2, istac3],
   },
@@ -85,6 +97,8 @@ const partnerProjects = [
     id: 5,
     title: "Bayrampaşa Aydınlatma Tesisi",
     description: "Sterilizasyon tesisi altyapısı.",
+    location: "Bayrampaşa",
+    service: "aydınlatma tesisi",
 
     images: [adapark, adapark1, adapark2, adapark3],
   },
@@ -92,6 +106,8 @@ const partnerProjects = [
     id: 6,
     title: "Bayrampaşa Aydınlatma Tesisi",
     description: "Sterilizasyon tesisi altyapısı.",
+    location: "Bayrampaşa",
+    service: "aydınlatma tesisi",
 
     images: [hamidiye3, hamidiye1, hamidiye2, hamidiye],
   },
@@ -147,9 +163,14 @@ const ProjectsPage: React.FC = () => {
             <CarouselItem key={idx}>
               <img
                 src={img}
-                alt={`${p.title} ${idx + 1}`}
+                alt={`${p.location} ${p.title} ${idx + 1} - Yeni RM İnşaat ${p.service} referansı`}
                 className="mb-3 h-52 w-full cursor-pointer rounded-md object-cover md:h-64"
-                onClick={() => openModal(img, `${p.title} ${idx + 1}`)}
+                onClick={() =>
+                  openModal(
+                    img,
+                    `${p.location} ${p.title} ${idx + 1} - Yeni RM İnşaat ${p.service} referansı`
+                  )
+                }
               />
             </CarouselItem>
           ))}
@@ -172,9 +193,9 @@ const ProjectsPage: React.FC = () => {
     <>
       <Seo
         title="Projelerimiz | Yeni RM İnşaat"
-        description="Yeni RM İnşaat’ın Bayrampaşa, İstanbul ve ortak proje referanslarını inceleyin. Kentsel dönüşüm, kat karşılığı ve modern konut projeleri."
+        description="Yeni RM İnşaat’ın Bayrampaşa inşaat firması referanslarını, kentsel dönüşüm, kat karşılığı inşaat ve ortak proje çalışmalarını inceleyin."
         path="/projects"
-        keywords="Yeni RM İnşaat projeleri, Bayrampaşa konut projeleri, kentsel dönüşüm referansları, kat karşılığı projeler"
+        keywords="Yeni RM İnşaat projeleri, Bayrampaşa inşaat firması referansları, Bayrampaşa konut projeleri, kentsel dönüşüm referansları, kat karşılığı projeler"
       />
       <AnimatedSection className="mx-auto max-w-7xl px-6 pb-24 pt-32 text-white lg:px-8">
         <div className="mb-12 text-center">
