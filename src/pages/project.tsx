@@ -126,6 +126,8 @@ const ImageModal: React.FC<{
       src={src}
       alt={alt}
       className="max-w-5xl max-h-[90vh] rounded-lg shadow-lg cursor-auto"
+      loading="eager"
+      decoding="async"
       onClick={(e) => e.stopPropagation()}
     />
     <button
@@ -165,6 +167,10 @@ const ProjectsPage: React.FC = () => {
                 src={img}
                 alt={`${p.location} ${p.title} ${idx + 1} - Yeni RM İnşaat ${p.service} referansı`}
                 className="mb-3 h-52 w-full cursor-pointer rounded-md object-cover md:h-64"
+                loading={idx === 0 ? "eager" : "lazy"}
+                decoding="async"
+                width={640}
+                height={360}
                 onClick={() =>
                   openModal(
                     img,

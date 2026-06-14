@@ -8,7 +8,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/footer";
 import WhatsAppButton from "./components/WhatsAppButton";
 
-import bgImage from "./assets/bgimage.jpg";
+import bgImage from "./assets/optimized/bgimage-1920.jpg";
 import { HelmetProvider } from "react-helmet-async";
 import PageLoader from "./components/pageLoader";
 

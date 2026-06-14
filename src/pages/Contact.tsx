@@ -3,6 +3,7 @@ import AnimatedSection from "../components/animatedSection";
 import Seo from "../components/Seo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import contactImage from "../assets/optimized/iletisim-1400.jpg";
 
 const ContactPage: React.FC = () => {
   const whatsappHref =
@@ -29,6 +30,13 @@ const ContactPage: React.FC = () => {
 
         <div className="mx-auto grid max-w-6xl grid-cols-1 items-start gap-12 md:grid-cols-2">
           <div className="rounded-lg border border-white/10 bg-black/35 p-6 shadow-2xl backdrop-blur-md md:p-8">
+            <img
+              src={contactImage}
+              alt="Yeni RM İnşaat Bayrampaşa iletişim ve ofis görseli"
+              className="mb-8 h-48 w-full rounded-md object-cover"
+              loading="eager"
+              decoding="async"
+            />
             <div className="space-y-8">
               <div>
                 <h2 className="mb-2 text-xl font-semibold text-gold">Adres</h2>

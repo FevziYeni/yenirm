@@ -1,5 +1,5 @@
 import React from "react";
-import iletişim from "../assets/iletişim.jpg";
+import iletişim from "../assets/optimized/iletisim-1400.jpg";
 import AnimatedSection from "./animatedSection";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
@@ -73,6 +73,8 @@ const ContactSection = () => {
           src={iletişim}
           alt="Yeni RM İnşaat Bayrampaşa Ofisi İletişim Görseli"
           className="h-[420px] w-full rounded-lg object-cover shadow-2xl"
+          loading="lazy"
+          decoding="async"
         />
       </div>
     </AnimatedSection>

@@ -1,5 +1,5 @@
 import React from "react";
-import hakkimizda from "../assets/hakkımızda.jpg";
+import hakkimizda from "../assets/optimized/hakkimizda-1400.jpg";
 import AnimatedSection from "./animatedSection";
 import { useNavigate } from "react-router-dom";
 
@@ -46,6 +46,8 @@ const AboutSection = () => {
             src={hakkimizda}
             alt="Yeni RM İnşaat Bayrampaşa Hakkımızda Görseli"
             className="h-[420px] w-full rounded-lg object-cover shadow-2xl"
+            loading="lazy"
+            decoding="async"
           />
         </div>
       </div>

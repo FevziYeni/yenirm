@@ -92,6 +92,10 @@ const ProjectCardsSection = () => {
                         idx + 1
                       } - Yeni RM İnşaat ${project.service} referansı`}
                       className="h-[300px] w-full cursor-pointer rounded-md object-cover"
+                      loading={idx === 0 ? "eager" : "lazy"}
+                      decoding="async"
+                      width={640}
+                      height={360}
                       onClick={() =>
                         openModal(
                           img,
@@ -134,6 +138,8 @@ const ProjectCardsSection = () => {
             src={modalImage}
             alt={modalAlt}
             className="max-w-4xl max-h-[90vh] rounded-lg shadow-lg cursor-auto"
+            loading="eager"
+            decoding="async"
             onClick={(e) => e.stopPropagation()}
           />
           <button

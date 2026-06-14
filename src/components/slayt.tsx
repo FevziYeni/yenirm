@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import bgImage from "../assets/bg_image.jpg";
+import bgImage from "../assets/optimized/bg_image-1920.jpg";
 import AnimatedSection from "./animatedSection";
 
 const HeroSection = () => {
@@ -15,6 +15,8 @@ const HeroSection = () => {
           src={bgImage}
           alt="Bayrampaşa Kat Karşılığı ve Kentsel Dönüşüm Projeleri"
           className="absolute inset-0 h-full w-full object-cover"
+          loading="eager"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/25" />
         <div className="absolute bottom-0 left-0 h-40 w-full bg-gradient-to-t from-zinc-950/80 to-transparent" />
