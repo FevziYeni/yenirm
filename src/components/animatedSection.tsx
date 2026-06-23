@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-const AnimatedSection = ({ children, className = "" }: any) => {
+const AnimatedSection = ({ children, className = "", ...props }: any) => {
   const controls = useAnimation();
   const [ref, inView] = useInView({
     triggerOnce: true, // This ensures the animation only happens once
@@ -28,6 +28,7 @@ const AnimatedSection = ({ children, className = "" }: any) => {
       initial={{ opacity: 0, y: 40 }}
       animate={controls}
       className={className}
+      {...props}
     >
       {children}
     </motion.div>

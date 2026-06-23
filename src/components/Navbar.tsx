@@ -87,7 +87,7 @@ const Navbar: React.FC = () => {
             </div>
 
             {/* Masaüstü Menü */}
-            <div className="hidden items-center gap-2 md:flex pointer-events-auto">
+            <div className="hidden items-center gap-1 lg:flex pointer-events-auto">
               <Button
                 type="button"
                 onClick={() => handleNavigate("/")}
@@ -105,6 +105,8 @@ const Navbar: React.FC = () => {
               >
                 Projelerimiz
               </Button>
+
+             
 
               <Button
                 type="button"
@@ -124,6 +126,17 @@ const Navbar: React.FC = () => {
                 İletişim
               </Button>
 
+               <Button
+                type="button"
+                onClick={() =>
+                  handleNavigate("/bayrampasa-kentsel-donusum")
+                }
+                variant="ghost"
+                className="text-sm text-white hover:bg-white/10 hover:text-gold transition cursor-pointer pointer-events-auto"
+              >
+                Kentsel Dönüşüm
+              </Button>
+
               <a
                 href={whatsappHref}
                 target="_blank"
@@ -137,7 +150,7 @@ const Navbar: React.FC = () => {
             </div>
 
             {/* Mobil Hamburger Menü */}
-            <div className="md:hidden pointer-events-auto">
+            <div className="lg:hidden pointer-events-auto">
               <button
                 type="button"
                 onClick={() => setDrawerOpen(true)}
@@ -180,6 +193,17 @@ const Navbar: React.FC = () => {
                 onClick={() => handleNavigate("/projects")}
               >
                 Projelerimiz
+              </Button>
+
+              <Button
+                type="button"
+                variant="ghost"
+                className="justify-start text-white hover:text-yellow-300 cursor-pointer pointer-events-auto"
+                onClick={() =>
+                  handleNavigate("/bayrampasa-kentsel-donusum")
+                }
+              >
+                Kentsel Dönüşüm
               </Button>
 
               <Button

@@ -44,6 +44,15 @@ const Footer: React.FC = () => {
             </li>
             <li>
               <Link
+                to="/bayrampasa-kentsel-donusum"
+                className="hover:text-gold"
+                aria-label="Bayrampaşa Kentsel Dönüşüm Rehberi"
+              >
+                Kentsel Dönüşüm
+              </Link>
+            </li>
+            <li>
+              <Link
                 to="/about"
                 className="hover:text-gold"
                 aria-label="Hakkımızda"

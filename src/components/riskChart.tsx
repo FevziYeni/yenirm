@@ -1,36 +1,12 @@
 import React from "react";
-import {
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
-  Tooltip,
-  ResponsiveContainer,
-  Cell,
-} from "recharts";
+import { Link } from "react-router-dom";
+import { AlertTriangle, ArrowRight, Building2, ShieldCheck } from "lucide-react";
 import AnimatedSection from "./animatedSection";
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/Card";
 
-const RiskChartSection = () => {
-  const RiskData = [
-    { age: "0-10 yıl", Risk: 5 },
-    { age: "10-20 yıl", Risk: 25 },
-    { age: "20-30 yıl", Risk: 40 },
-    { age: "30-40 yıl", Risk: 65 },
-    { age: "40+ yıl", Risk: 90 },
-  ];
-
-  const getRiskColor = (value: number) => {
-    if (value < 25) return "#16a34a";
-    if (value <= 37) return "#facc15";
-    if (value <= 50) return "#eab308";
-    if (value <= 75) return "#f97316";
-    return "#dc2626";
-  };
-
+const RiskChartSection: React.FC = () => {
   return (
     <AnimatedSection className="px-6 py-24">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 md:grid-cols-2">
         <div>
           <span className="text-sm font-semibold uppercase tracking-wide text-gold">
             Yapı güvenliği
@@ -38,48 +14,57 @@ const RiskChartSection = () => {
           <h2 className="mt-3 text-4xl font-bold text-white md:text-5xl">
             Kentsel Dönüşüm Neden Şart?
           </h2>
-          <p className="mt-6 text-lg leading-8 text-white/85">
-            Bayrampaşa ve İstanbul’daki eski binalar, özellikle 20 yıl ve üzeri
-            yapılar, deprem riski taşır. Kentsel dönüşüm ve kat karşılığı
-            projeleri ile güvenli ve modern yaşam alanları oluşturmak mümkündür.
+          <p className="mt-6 text-lg leading-8 text-white">
+            İstanbul’da güvenli yapı stoğunun artırılması, deprem riskinin
+            azaltılması ve güncel standartlara uygun yaşam alanlarının
+            oluşturulması için kentsel dönüşüm kritik öneme sahiptir.
           </p>
-          <p className="mt-4 text-base text-white/70">
-            Aşağıda, bina yaşına göre olası yıkılma risk yüzdesi yer almaktadır.
+          <p className="mt-4 text-base leading-7 text-white">
+            Bina yaşı tek başına risk sonucu vermez. Taşıyıcı sistem, zemin,
+            beton ve donatı, yapısal düzensizlikler ve mevcut hasarlar uzman
+            mühendislerce birlikte değerlendirilmelidir.
           </p>
+          <Link
+            to="/bayrampasa-kentsel-donusum"
+            className="mt-8 inline-flex items-center gap-2 rounded-md bg-gold px-6 py-3 font-bold text-black transition hover:bg-white"
+          >
+            Kapsamlı Rehberi İncele
+            <ArrowRight size={18} />
+          </Link>
         </div>
 
-        <Card className="rounded-lg border border-white/10 bg-black/40 p-6 text-white shadow-2xl backdrop-blur-md">
-          <CardHeader>
-            <CardTitle className="mb-6 text-2xl font-bold text-white md:text-3xl">
-              Bina Yaşı ve Yıkılma Riski Grafiği
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <ResponsiveContainer width="100%" height={300}>
-              <BarChart data={RiskData}>
-                <XAxis
-                  dataKey="age"
-                  stroke="white"
-                  tick={{ fill: "white", fontSize: 12 }}
-                />
-                <YAxis
-                  stroke="white"
-                  domain={[0, 100]}
-                  tickFormatter={(val) => `${val}%`}
-                />
-                <Tooltip formatter={(value) => `${value}%`} />
-                <Bar dataKey="Risk">
-                  {RiskData.map((entry, index) => (
-                    <Cell
-                      key={`cell-${index}`}
-                      fill={getRiskColor(entry.Risk)}
-                    />
-                  ))}
-                </Bar>
-              </BarChart>
-            </ResponsiveContainer>
-          </CardContent>
-        </Card>
+        <div className="grid gap-4">
+          <div className="flex gap-4 rounded-lg border border-white/10 bg-black/40 p-5 shadow-xl backdrop-blur-md">
+            <ShieldCheck className="shrink-0 text-gold" size={28} />
+            <div>
+              <h3 className="font-semibold text-white">Can güvenliği</h3>
+              <p className="mt-2 text-sm leading-6 text-white/65">
+                Öncelik, yapıların deprem etkileri karşısındaki gerçek
+                performansının uzman yöntemlerle değerlendirilmesidir.
+              </p>
+            </div>
+          </div>
+          <div className="flex gap-4 rounded-lg border border-white/10 bg-black/40 p-5 shadow-xl backdrop-blur-md">
+            <Building2 className="shrink-0 text-gold" size={28} />
+            <div>
+              <h3 className="font-semibold text-white">Güncel standartlar</h3>
+              <p className="mt-2 text-sm leading-6 text-white/65">
+                Yeni yapılar deprem, yangın, yalıtım, erişilebilirlik ve
+                enerji verimliliği gereklilikleriyle birlikte ele alınır.
+              </p>
+            </div>
+          </div>
+          <div className="flex gap-4 rounded-lg border border-gold/25 bg-gold/10 p-5">
+            <AlertTriangle className="shrink-0 text-gold" size={28} />
+            <div>
+              <h3 className="font-semibold text-white">Doğru tespit</h3>
+              <p className="mt-2 text-sm leading-6 text-white/70">
+                Hızlı tarama ve ön inceleme yol gösterir; resmî riskli yapı
+                tespiti yalnızca yetkili lisanslı kuruluşlarca yapılır.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </AnimatedSection>
   );

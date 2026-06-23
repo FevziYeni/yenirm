@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Project from "./pages/project";
+import UrbanTransformation from "./pages/UrbanTransformation";
 import Navbar from "./components/Navbar";
 import Footer from "./components/footer";
 import WhatsAppButton from "./components/WhatsAppButton";
@@ -38,6 +39,10 @@ const App: React.FC = () => {
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/projects" element={<Project />} />
+                <Route
+                  path="/bayrampasa-kentsel-donusum"
+                  element={<UrbanTransformation />}
+                />
               </Routes>
             </main>
             <Footer />
