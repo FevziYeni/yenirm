@@ -73,29 +73,32 @@ const Footer: React.FC = () => {
         </div>
 
         <div>
-          <h4 className="mb-2 text-lg font-semibold text-gold">
-            İletişim
-          </h4>
+          <h4 className="mb-2 text-lg font-semibold text-gold">Hizmetler</h4>
           <ul className="space-y-2 text-sm text-white/75">
             <li>
-              <a
-                href="tel:+905323322960"
+              <Link
+                to="/bayrampasa-insaat-firmasi"
                 className="hover:text-gold"
-                aria-label="Telefon"
               >
-                +90 (532) 332 29 60
-              </a>
+                Bayrampaşa İnşaat Firması
+              </Link>
             </li>
             <li>
-              <a
-                href="mailto:info@yenirminsaat.com"
+              <Link
+                to="/bayrampasa-kentsel-donusum"
                 className="hover:text-gold"
-                aria-label="E-posta"
               >
-                info@yenirminsaat.com
-              </a>
+                Kentsel Dönüşüm
+              </Link>
             </li>
-            <li>Bayrampaşa / İstanbul</li>
+            <li>
+              <Link
+                to="/bayrampasa-kat-karsiligi-insaat"
+                className="hover:text-gold"
+              >
+                Kat Karşılığı İnşaat
+              </Link>
+            </li>
           </ul>
         </div>
 

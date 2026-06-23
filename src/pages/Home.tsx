@@ -3,6 +3,7 @@ import React from "react";
 import AboutSection from "../components/aboutSec";
 import ContactSection from "../components/contactSec";
 import FaqSection, { bayrampasaFaqs } from "../components/FaqSection";
+import LocalServiceLinks from "../components/LocalServiceLinks";
 import ProjectsSection from "../components/content";
 import FeaturesSection from "../components/features";
 import ProjectCardsSection from "../components/projectSec";
@@ -79,6 +80,7 @@ const Home: React.FC = () => {
 
       <div>
         <HeroSection />
+        <LocalServiceLinks />
         <RiskChartSection />
         <ProjectCardsSection />
         <ProjectsSection />
