@@ -38,7 +38,7 @@ const ContactSection = () => {
             <div>
               <h2 className="text-lg font-semibold text-gold">E-posta</h2>
               <p className="mt-1 text-white/80" aria-label="E-posta Adresi">
-                yenirminsaat@hotmail.com
+                info@yenirminsaat.com
               </p>
             </div>
           </div>
@@ -61,7 +61,7 @@ const ContactSection = () => {
               Ara
             </a>
             <a
-              href="mailto:yenirminsaat@hotmail.com"
+              href="mailto:info@yenirminsaat.com"
               aria-label="E-posta göndermek için tıkla"
               className="inline-flex justify-center rounded-md border border-white/35 px-6 py-3 font-semibold text-white transition hover:border-gold hover:bg-gold hover:text-black"
             >

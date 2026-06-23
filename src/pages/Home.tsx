@@ -21,7 +21,7 @@ const Home: React.FC = () => {
     description:
       "Yeni RM İnşaat, Bayrampaşa ve İstanbul’da kentsel dönüşüm, kat karşılığı inşaat ve modern konut projeleri geliştiren yerel inşaat firmasıdır.",
     telephone: "+905323322960",
-    email: "yenirminsaat@hotmail.com",
+    email: "info@yenirminsaat.com",
     priceRange: "$$",
     address: {
       "@type": "PostalAddress",

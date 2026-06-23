@@ -88,11 +88,11 @@ const Footer: React.FC = () => {
             </li>
             <li>
               <a
-                href="mailto:yenirminsaat@hotmail.com"
+                href="mailto:info@yenirminsaat.com"
                 className="hover:text-gold"
                 aria-label="E-posta"
               >
-                yenirminsaat@hotmail.com
+                info@yenirminsaat.com
               </a>
             </li>
             <li>Bayrampaşa / İstanbul</li>

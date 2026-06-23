@@ -58,10 +58,10 @@ const ContactPage: React.FC = () => {
                   E-posta
                 </h2>
                 <a
-                  href="mailto:yenirminsaat@hotmail.com"
+                  href="mailto:info@yenirminsaat.com"
                   className="text-white/80 transition hover:text-gold"
                 >
-                  yenirminsaat@hotmail.com
+                  info@yenirminsaat.com
                 </a>
               </div>
             </div>
@@ -83,7 +83,7 @@ const ContactPage: React.FC = () => {
                 Ara
               </a>
               <a
-                href="mailto:yenirminsaat@hotmail.com"
+                href="mailto:info@yenirminsaat.com"
                 className="inline-flex justify-center rounded-md border border-white/35 px-6 py-3 font-semibold text-white transition duration-300 hover:border-gold hover:bg-gold hover:text-black"
               >
                 E-posta Gönder
