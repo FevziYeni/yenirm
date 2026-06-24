@@ -4,7 +4,7 @@ import LOGO from "../assets/LOGOK.png";
 import { Button } from "../components/ui/Button";
 import clsx from "clsx";
 import { Separator } from "@radix-ui/react-separator";
-import { Menu, PhoneCall } from "lucide-react";
+import { Calculator, Menu, PhoneCall } from "lucide-react";
 
 import {
   Drawer,
@@ -137,6 +137,16 @@ const Navbar: React.FC = () => {
                 Kentsel Dönüşüm
               </Button>
 
+              <Button
+                type="button"
+                onClick={() => handleNavigate("/insaat-maliyet-hesaplama")}
+                variant="ghost"
+                className="text-sm text-white hover:bg-white/10 hover:text-gold transition cursor-pointer pointer-events-auto"
+              >
+                <Calculator size={16} />
+                Maliyet Hesapla
+              </Button>
+
               <a
                 href={whatsappHref}
                 target="_blank"
@@ -204,6 +214,16 @@ const Navbar: React.FC = () => {
                 }
               >
                 Kentsel Dönüşüm
+              </Button>
+
+              <Button
+                type="button"
+                variant="ghost"
+                className="justify-start text-white hover:text-yellow-300 cursor-pointer pointer-events-auto"
+                onClick={() => handleNavigate("/insaat-maliyet-hesaplama")}
+              >
+                <Calculator size={16} />
+                Maliyet Hesapla
               </Button>
 
               <Button

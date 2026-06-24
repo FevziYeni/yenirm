@@ -1,6 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Building2, Handshake, ShieldCheck } from "lucide-react";
+import {
+  ArrowRight,
+  Building2,
+  Calculator,
+  Handshake,
+  ShieldCheck,
+} from "lucide-react";
 import AnimatedSection from "./animatedSection";
 
 const services = [
@@ -22,6 +28,12 @@ const services = [
     text: "Arsa fizibilitesi, paylaşım modeli ve sözleşme sürecini inceleyin.",
     href: "/bayrampasa-kat-karsiligi-insaat",
   },
+  {
+    icon: Calculator,
+    title: "İnşaat Maliyet Hesaplama",
+    text: "Proje bilgilerinizi girin, yaklaşık maliyet aralığını hızlıca görün.",
+    href: "/insaat-maliyet-hesaplama",
+  },
 ];
 
 const LocalServiceLinks: React.FC = () => (
@@ -34,7 +46,7 @@ const LocalServiceLinks: React.FC = () => (
         Projeniz için doğru bilgiye ulaşın.
       </h2>
     </div>
-    <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+    <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
       {services.map((service) => {
         const Icon = service.icon;
         return (

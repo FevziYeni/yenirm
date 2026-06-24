@@ -18,6 +18,7 @@ const BayrampasaConstruction = React.lazy(
   () => import("./pages/BayrampasaConstruction"),
 );
 const BuildForLand = React.lazy(() => import("./pages/BuildForLand"));
+const CostEstimate = React.lazy(() => import("./pages/CostEstimate"));
 
 const App: React.FC = () => {
   return (
@@ -52,6 +53,10 @@ const App: React.FC = () => {
                   <Route
                     path="/bayrampasa-kat-karsiligi-insaat"
                     element={<BuildForLand />}
+                  />
+                  <Route
+                    path="/insaat-maliyet-hesaplama"
+                    element={<CostEstimate />}
                   />
                 </Routes>
               </Suspense>

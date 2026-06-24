@@ -53,6 +53,17 @@ const pages = [
     ],
   },
   {
+    path: "/insaat-maliyet-hesaplama",
+    title: "İnşaat Maliyet Hesaplama | Ortalama Teklif Al | Yeni RM",
+    description:
+      "Bayrampaşa ve İstanbul için kentsel dönüşüm, kat karşılığı inşaat ve konut projelerinde yaklaşık maliyet aralığı hesaplayın. Ortalama teklif için bilgilerinizi girin.",
+    heading: "İnşaat Maliyet Hesaplama ve Ortalama Teklif Aracı",
+    paragraphs: [
+      "Kentsel dönüşüm, kat karşılığı inşaat ve konut projelerinde maliyet; toplam kapalı alan, zemin, bodrum, otopark, asansör, malzeme kalitesi ve yıkım koşullarına göre değişir.",
+      "Yeni RM İnşaat maliyet hesaplama aracı, Bayrampaşa ve İstanbul özelinde yaklaşık ön aralık sunar. Kesin teklif için yerinde keşif, imar kontrolü ve teknik şartname gerekir.",
+    ],
+  },
+  {
     path: "/projects",
     title: "Bayrampaşa İnşaat Projeleri | Yeni RM İnşaat",
     description:
@@ -103,6 +114,7 @@ const renderFallback = (page) => {
     ["/bayrampasa-insaat-firmasi", "Bayrampaşa İnşaat Firması"],
     ["/bayrampasa-kentsel-donusum", "Bayrampaşa Kentsel Dönüşüm"],
     ["/bayrampasa-kat-karsiligi-insaat", "Kat Karşılığı İnşaat"],
+    ["/insaat-maliyet-hesaplama", "İnşaat Maliyet Hesaplama"],
     ["/projects", "Projeler"],
     ["/contact", "İletişim"],
   ];

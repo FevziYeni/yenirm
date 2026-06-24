@@ -99,6 +99,14 @@ const Footer: React.FC = () => {
                 Kat Karşılığı İnşaat
               </Link>
             </li>
+            <li>
+              <Link
+                to="/insaat-maliyet-hesaplama"
+                className="hover:text-gold"
+              >
+                İnşaat Maliyet Hesaplama
+              </Link>
+            </li>
           </ul>
         </div>
 
